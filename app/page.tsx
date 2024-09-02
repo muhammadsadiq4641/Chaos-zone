@@ -30,7 +30,7 @@ const Home: React.FC = () => {
 
     const fifthTimer = setTimeout(() => {
       setShowContent(true); 
-    }, 2000); 
+    }, 24000); 
 
     return () => {
       clearTimeout(firstTimer);
