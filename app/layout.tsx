@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cedarville_Cursive } from "next/font/google";
 import "./globals.css";
 import Web3ModalProvider from "@components/modals/connect-wallet/connect-wallet";
 
 const inter = Inter({ subsets: ["latin"] });
+
+
+const cedarvilleCursive = Cedarville_Cursive({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--cedarvilleCursive",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${cedarvilleCursive.variable}`}>
         <Web3ModalProvider>{children}</Web3ModalProvider>
       </body>
     </html>
