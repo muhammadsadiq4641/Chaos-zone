@@ -37,14 +37,14 @@ const MemeBox: FC = () => {
         className="w-[83px]"
       />
       <Modal open={isModalOpen} onCancel={handleCancel}>
-        <div className="bg-[#D21EFF] shadow-whiteShadow relative p-5 w-[600px] h-[400px] flex justify-center items-center">
+        <div className="bg-[#FA0019] shadow-whiteShadow relative p-5 w-[504px] h-[380px] flex justify-center items-center">
           <p className="text-black absolute top-4 right-4">
             <IoMdClose
               onClick={handleCancel}
               className="hover:bg-[#ffffff49]"
             />
           </p>
-          <video className="w-[500px] h-[380px]" ref={videoRef} autoPlay loop playsInline>
+          <video className="" ref={videoRef} autoPlay loop playsInline>
             <source src="../assets/videos/chin-tapak.mp4" type="video/mp4" />
           </video>
         </div>

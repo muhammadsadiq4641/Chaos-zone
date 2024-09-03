@@ -30,7 +30,7 @@ const Home: React.FC = () => {
 
     const fifthTimer = setTimeout(() => {
       setShowContent(true); 
-    }, 24000); 
+    }, 2000); 
 
     return () => {
       clearTimeout(firstTimer);
@@ -54,9 +54,11 @@ const Home: React.FC = () => {
       )}
       {showContent && (
         <>
-        <div className="h-screen bg-[#FDF407]">
+        <div className="bg-hero-gradient h-[1000vh]">
+        <div className="h-screen">
           <Navbar />
           <Hero />
+        </div>
         </div>
         </>
       )}

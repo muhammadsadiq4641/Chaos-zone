@@ -13,6 +13,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          'hero-gradient': 'linear-gradient(180deg, rgba(255,245,1,1) 20%, rgba(88,252,57,1) 31%, rgba(56,167,252,1) 45%, rgba(245,24,246,1) 62%, rgba(212,28,254,1) 68%, rgba(244,132,37,1) 84%, rgba(254,233,1,1) 100%)',
       },
 
       fontFamily: {

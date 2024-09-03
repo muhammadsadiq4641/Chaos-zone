@@ -22,7 +22,7 @@ const LoaderFive = () => {
   return (
     <div className="w-full bg-[#FDF407] h-screen absolute">
       <div className="flex flex-col justify-center h-screen items-center gap-14">
-        <h1 className="font-cedarvilleCursive text-7xl text-center w-[1195px]">
+        <h1 className="font-cedarvilleCursive text-7xl text-center xl:w-[1195px]">
           Sorry for the inconvenience! Please accept our apology
         </h1>
         <Image

@@ -24,13 +24,13 @@ const SearchBar = () => {
     <div>
       <div
         onClick={handleClick}
-        className="flex justify-between w-[440px] px-5 border-2 py-3 shadow-BlackShadow cursor-pointer border-black"
+        className="flex justify-between w-full md:w-[440px] px-5 border-2 py-3 shadow-BlackShadow cursor-pointer border-black"
       >
         <p className="font-cedarvilleCursive text-lg">Don’t Search!</p>
         <Image src={SearchIcon} alt="search icon" />
       </div>
       {isOpen && (
-        <div className="border border-black  p-5 w-[440px] mt-5 relative">
+        <div className="border border-black bg-[#FDF407] p-5 w-[440px] mt-5 fixed">
             <p onClick={handleCancle} className="absolute text-black text-2xl right-3 top-3 cursor-pointer"><IoIosClose /></p>
           <Image className="w-[60px] mx-auto mb-3"
             src={WebLogo}

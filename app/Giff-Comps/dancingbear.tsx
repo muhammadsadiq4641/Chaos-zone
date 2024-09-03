@@ -37,14 +37,14 @@ const DancingBear: FC = () => {
         className="w-[83px]"
       />
       <Modal open={isModalOpen} onCancel={handleCancel}>
-        <div className="bg-[#D21EFF] shadow-whiteShadow relative p-5 w-[600px] h-[400px] flex justify-center items-center">
+        <div className="md:bg-[#31FF28] md:shadow-whiteShadow relative p-5  w-[90%] md:w-[504px] h-[70%] md:h-[380px] flex justify-center items-center">
           <p className="text-black absolute top-4 right-4">
             <IoMdClose
               onClick={handleCancel}
               className="hover:bg-[#ffffff49]"
             />
           </p>
-          <video className="w-[500px] h-[380px]" ref={videoRef} autoPlay loop playsInline>
+          <video className="w-full h-full" ref={videoRef} autoPlay loop playsInline>
             <source src="../assets/videos/sleeping-guy-video.mp4" type="video/mp4" />
           </video>
         </div>
