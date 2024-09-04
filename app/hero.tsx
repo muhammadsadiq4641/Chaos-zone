@@ -5,19 +5,22 @@ import SearchBar from "./Giff-Comps/search-bar";
 import MemeBox from "./Giff-Comps/meme-box";
 import LoaderSixth from "./loaders/loader-six";
 import Image from "next/image";
-import CurlyHr from "@assets/images/curly-hr.png"
+import CurlyHr from "@assets/images/curly-hr.png";
 
 const Hero = () => {
+  const [showLoader, setShowLoader] = useState(true);
+
   const [position, setPosition] = useState<{ top: number; left: number }>({
     top: 0,
     left: 0,
   });
 
-  const [showLoader, setShowLoader] = useState(true);
-
   const handleMouseEnter = () => {
-    const randomTop = Math.floor(Math.random() * 600) - 300;
-    const randomLeft = Math.floor(Math.random() * 600) - 300;
+    const maxTop = window.innerHeight / 2 - 100;
+    const maxLeft = window.innerWidth / 2 - 100;
+
+    const randomTop = Math.floor(Math.random() * (maxTop * 2)) - maxTop;
+    const randomLeft = Math.floor(Math.random() * (maxLeft * 2)) - maxLeft;
 
     setPosition({ top: randomTop, left: randomLeft });
   };
@@ -40,7 +43,8 @@ const Hero = () => {
             Where Nothing Makes Sense
           </p>
 
-          <button onClick={handleMouseEnter}
+          <button
+            onClick={handleMouseEnter}
             style={{
               transform: `translate(${position.left}px, ${position.top}px)`,
             }}
@@ -62,7 +66,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Image src={CurlyHr} alt="hr line" className="w-full"/>
+      <Image src={CurlyHr} alt="hr line" className="w-full" />
     </div>
   );
 };

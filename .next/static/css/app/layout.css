@@ -680,9 +680,6 @@ video {
 .mt-5 {
   margin-top: 1.25rem;
 }
-.mt-10 {
-  margin-top: 2.5rem;
-}
 .block {
   display: block;
 }
@@ -692,6 +689,9 @@ video {
 .h-\[1000vh\] {
   height: 1000vh;
 }
+.h-\[1100vh\] {
+  height: 1100vh;
+}
 .h-\[50px\] {
   height: 50px;
 }
@@ -700,21 +700,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[2000vh\] {
-  height: 2000vh;
-}
-.h-\[1500vh\] {
-  height: 1500vh;
-}
-.h-\[1200vh\] {
-  height: 1200vh;
-}
-.h-\[1100vh\] {
-  height: 1100vh;
-}
-.min-h-screen {
-  min-height: 100vh;
 }
 .w-\[150px\] {
   width: 150px;
@@ -824,14 +809,11 @@ video {
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }
-.bg-hero-gradient {
-  background-image: linear-gradient(180deg, rgba(255,245,1,1) 20%, rgba(88,252,57,1) 31%, rgba(56,167,252,1) 45%, rgba(245,24,246,1) 62%, rgba(212,28,254,1) 68%, rgba(244,132,37,1) 84%, rgba(254,233,1,1) 100%);
-}
 .bg-EmbarkBG {
   background-image: url('/assets/images/embark-bg.png');
 }
-.bg-contain {
-  background-size: contain;
+.bg-hero-gradient {
+  background-image: linear-gradient(180deg, rgba(255,245,1,1) 20%, rgba(88,252,57,1) 31%, rgba(56,167,252,1) 45%, rgba(245,24,246,1) 62%, rgba(212,28,254,1) 68%, rgba(244,132,37,1) 84%, rgba(254,233,1,1) 100%);
 }
 .bg-cover {
   background-size: cover;
@@ -955,9 +937,6 @@ video {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-.duration-1000 {
-  transition-duration: 1000ms;
 }
 .duration-300 {
   transition-duration: 300ms;
