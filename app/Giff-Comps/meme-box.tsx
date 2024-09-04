@@ -23,7 +23,7 @@ const MemeBox: FC = () => {
         videoRef.current.play();
       } else {
         videoRef.current.pause();
-        videoRef.current.currentTime = 0; // Optional: Reset video to start
+        videoRef.current.currentTime = 0;
       }
     }
   }, [isModalOpen]);
@@ -34,17 +34,32 @@ const MemeBox: FC = () => {
         onClick={showModal}
         src={MemeBoxGiff}
         alt="dancing bear"
-        className="w-[83px]"
+        className="w-[83px] cursor-pointer"
       />
-      <Modal open={isModalOpen} onCancel={handleCancel}>
-        <div className="bg-[#FA0019] shadow-whiteShadow relative p-5 w-[504px] h-[380px] flex justify-center items-center">
-          <p className="text-black absolute top-4 right-4">
-            <IoMdClose
-              onClick={handleCancel}
-              className="hover:bg-[#ffffff49]"
-            />
-          </p>
-          <video className="" ref={videoRef} autoPlay loop playsInline>
+      <Modal
+        open={isModalOpen}
+        onCancel={handleCancel}
+        footer={null}
+        centered
+        className="p-0 m-0"
+        style={{
+          top: 0,
+          padding: 0,
+        }}
+      >
+        <div className="bg-[#FA0019] relative shadow-whiteShadow md:p-5 p-2 w-full h-full md:h-auto md:max-w-[768px] mx-auto flex justify-center items-center">
+          <IoMdClose
+            onClick={handleCancel}
+            className="absolute z-50 text-white top-6 right-6 hover:bg-[#ffffff49] cursor-pointer"
+            size={15}
+          />
+          <video
+            ref={videoRef}
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            playsInline
+          >
             <source src="../assets/videos/chin-tapak.mp4" type="video/mp4" />
           </video>
         </div>

@@ -13,8 +13,11 @@ const LoaderFive = () => {
   });
 
   const handleMouseEnter = () => {
-    const randomTop = Math.floor(Math.random() * 600) - 300;
-    const randomLeft = Math.floor(Math.random() * 600) - 300;
+    const maxTop = window.innerHeight / 2 - 100; // Adjust the value based on button size
+    const maxLeft = window.innerWidth / 2 - 100; // Adjust the value based on button size
+
+    const randomTop = Math.floor(Math.random() * (maxTop * 2)) - maxTop;
+    const randomLeft = Math.floor(Math.random() * (maxLeft * 2)) - maxLeft;
 
     setPosition({ top: randomTop, left: randomLeft });
   };
@@ -22,14 +25,14 @@ const LoaderFive = () => {
   return (
     <div className="w-full bg-[#FDF407] h-screen absolute">
       <div className="flex flex-col justify-center h-screen items-center gap-14">
-        <h1 className="font-cedarvilleCursive text-7xl text-center xl:w-[1195px]">
+        <h1 className="font-cedarvilleCursive lg:text-7xl text-4xl text-center xl:w-[1195px]">
           Sorry for the inconvenience! Please accept our apology
         </h1>
         <Image
           style={{
             transform: `translate(${position.left}px, ${position.top}px)`,
           }}
-          className="mx-auto cursor-pointer transition-transform duration-1000 ease-out"
+          className="mx-auto max-lg:w-[150px] max-sm:w-[90px] cursor-pointer transition-transform duration-1000 ease-out"
           alt="cat-gif"
           src={BTNBG}
           onMouseEnter={() => {
@@ -40,9 +43,13 @@ const LoaderFive = () => {
         <div>
           {showText && (
             <>
-              <Image className="mx-auto" src={WebLogo} alt="laughter" />
-              <h5 className="font-cedarvilleCursive text-5xl text-center">
-                haha! the fool can,t even click the button
+              <Image
+                className="mx-auto max-lg:w-[50px]"
+                src={WebLogo}
+                alt="laughter"
+              />
+              <h5 className="font-cedarvilleCursive lg:text-5xl text-3xl text-center">
+                haha! the fool can't even click the button
               </h5>{" "}
             </>
           )}
