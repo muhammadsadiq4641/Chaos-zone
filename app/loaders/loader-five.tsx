@@ -13,8 +13,8 @@ const LoaderFive = () => {
   });
 
   const handleMouseEnter = () => {
-    const maxTop = window.innerHeight / 2 - 100; // Adjust the value based on button size
-    const maxLeft = window.innerWidth / 2 - 100; // Adjust the value based on button size
+    const maxTop = window.innerHeight / 2 - 100; 
+    const maxLeft = window.innerWidth / 2 - 100; 
 
     const randomTop = Math.floor(Math.random() * (maxTop * 2)) - maxTop;
     const randomLeft = Math.floor(Math.random() * (maxLeft * 2)) - maxLeft;
@@ -28,11 +28,11 @@ const LoaderFive = () => {
         <h1 className="font-cedarvilleCursive lg:text-7xl text-4xl text-center xl:w-[1195px]">
           Sorry for the inconvenience! Please accept our apology
         </h1>
-        <Image
+        <Image onClick={handleMouseEnter}
           style={{
             transform: `translate(${position.left}px, ${position.top}px)`,
           }}
-          className="mx-auto max-lg:w-[150px] max-sm:w-[90px] cursor-pointer transition-transform duration-1000 ease-out"
+          className="mx-auto max-lg:w-[150px] max-sm:w-[90px] cursor-pointer transition-transform duration-500 ease-out"
           alt="cat-gif"
           src={BTNBG}
           onMouseEnter={() => {

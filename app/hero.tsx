@@ -40,7 +40,7 @@ const Hero = () => {
             Where Nothing Makes Sense
           </p>
 
-          <button
+          <button onClick={handleMouseEnter}
             style={{
               transform: `translate(${position.left}px, ${position.top}px)`,
             }}

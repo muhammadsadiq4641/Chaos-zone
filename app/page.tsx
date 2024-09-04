@@ -1,4 +1,5 @@
 "use client";
+import Embark from "./embark";
 import Hero from "./hero";
 import Loader from "./loaders/loader";
 import LoaderFive from "./loaders/loader-five";
@@ -59,6 +60,8 @@ const Home: React.FC = () => {
           <Navbar />
           <Hero />
         </div>
+        <LoaderFive />
+     <Embark />
       
         </div>
         </>
