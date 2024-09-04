@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Cedarville_Cursive } from "next/font/google";
+import { Kalam, Cedarville_Cursive } from "next/font/google";
 import "./globals.css";
 import Web3ModalProvider from "@components/modals/connect-wallet/connect-wallet";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const kalam = Kalam({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"], // Specify available weights
+});
 
 const cedarvilleCursive = Cedarville_Cursive({
   subsets: ["latin"],
@@ -24,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${cedarvilleCursive.variable}`}>
+      <body className={`${kalam.className} ${cedarvilleCursive.variable}`}>
         <Web3ModalProvider>{children}</Web3ModalProvider>
       </body>
     </html>

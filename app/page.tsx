@@ -8,30 +8,34 @@ import LoaderTwo from "./loaders/loader-two";
 import LoaderThree from "./loaders/loaderThree";
 import Navbar from "./navbar";
 import React, { useState, useEffect } from "react";
+import Tokenomic from "./tokenomic";
+import Footer from "./footer";
 
 const Home: React.FC = () => {
-  const [currentLoader, setCurrentLoader] = useState<'loader' | 'loaderTwo' | 'loaderThree' | 'loaderFour' | 'loaderFive'>('loader');
+  const [currentLoader, setCurrentLoader] = useState<
+    "loader" | "loaderTwo" | "loaderThree" | "loaderFour" | "loaderFive"
+  >("loader");
   const [showContent, setShowContent] = useState<boolean>(false);
 
   useEffect(() => {
     const firstTimer = setTimeout(() => {
-      setCurrentLoader('loaderTwo'); 
+      setCurrentLoader("loaderTwo");
     }, 3000);
 
     const secondTimer = setTimeout(() => {
-      setCurrentLoader('loaderThree'); 
-    }, 6000); 
+      setCurrentLoader("loaderThree");
+    }, 6000);
 
     const thirdTimer = setTimeout(() => {
-      setCurrentLoader('loaderFour'); 
-    }, 8000); 
+      setCurrentLoader("loaderFour");
+    }, 8000);
     const fourthTimer = setTimeout(() => {
-      setCurrentLoader('loaderFive'); 
-    }, 11000); 
+      setCurrentLoader("loaderFive");
+    }, 11000);
 
     const fifthTimer = setTimeout(() => {
-      setShowContent(true); 
-    }, 24000); 
+      setShowContent(true);
+    }, 2000);
 
     return () => {
       clearTimeout(firstTimer);
@@ -43,27 +47,27 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <main className="">
+    <main className="bg-[#FDF407]">
       {!showContent && (
         <>
-          {currentLoader === 'loader' && <Loader />}
-          {currentLoader === 'loaderTwo' && <LoaderTwo />}
-          {currentLoader === 'loaderThree' && <LoaderThree />} 
-          {currentLoader === 'loaderFour' && <LoaderFour />} 
-          {currentLoader === 'loaderFive' && <LoaderFive />} 
+          {currentLoader === "loader" && <Loader />}
+          {currentLoader === "loaderTwo" && <LoaderTwo />}
+          {currentLoader === "loaderThree" && <LoaderThree />}
+          {currentLoader === "loaderFour" && <LoaderFour />}
+          {currentLoader === "loaderFive" && <LoaderFive />}
         </>
       )}
       {showContent && (
         <>
-        <div className="bg-hero-gradient h-[1000vh]">
-        <div className="h-screen">
-          <Navbar />
-          <Hero />
-        </div>
-        <LoaderFive />
-     <Embark />
-      
-        </div>
+            <div className="bg-[#FDF407] h-screen">
+              <Navbar />
+              <Hero />
+            </div>
+            <div className="bg-hero-gradient xl:h-[1080vh]">
+              <Embark />
+            </div>
+            <Tokenomic />
+            <Footer />
         </>
       )}
     </main>
