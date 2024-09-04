@@ -31,11 +31,11 @@ const Home: React.FC = () => {
     }, 8000);
     const fourthTimer = setTimeout(() => {
       setCurrentLoader("loaderFive");
-    }, 11000);
+    }, 14000);
 
     const fifthTimer = setTimeout(() => {
       setShowContent(true);
-    }, 2000);
+    }, 24000);
 
     return () => {
       clearTimeout(firstTimer);
